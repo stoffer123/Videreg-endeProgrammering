@@ -1,4 +1,4 @@
-package dk.cphbusiness.vp.f2024.cars.models;
+package dk.cphbusiness.vp.f2024.carfactory.factory.models;
 
 
 public class Bmw extends Car

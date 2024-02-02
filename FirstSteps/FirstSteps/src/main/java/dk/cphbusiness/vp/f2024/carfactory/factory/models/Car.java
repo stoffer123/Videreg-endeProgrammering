@@ -1,5 +1,5 @@
-package dk.cphbusiness.vp.f2024.cars.models;
-import java.util.ArrayList;
+package dk.cphbusiness.vp.f2024.carfactory.factory.models;
+
 public class Car
 {
     private static int serialNumber;

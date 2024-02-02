@@ -1,7 +1,6 @@
-package dk.cphbusiness.vp.f2024.cars;
+package dk.cphbusiness.vp.f2024.carfactory;
 
-import dk.cphbusiness.vp.f2024.cars.models.Bmw;
-import dk.cphbusiness.vp.f2024.cars.factory.Factory;
+import dk.cphbusiness.vp.f2024.carfactory.factory.Factory;
 
 public class Main
 {
@@ -12,6 +11,7 @@ public class Main
         factory.produceCar(5, "BMW");
 
         factory.printAllCars();
+
 
 
     }
