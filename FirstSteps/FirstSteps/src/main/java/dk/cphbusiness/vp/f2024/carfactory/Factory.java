@@ -1,7 +1,7 @@
-package dk.cphbusiness.vp.f2024.carfactory.factory;
-import dk.cphbusiness.vp.f2024.carfactory.factory.models.Bmw;
-import dk.cphbusiness.vp.f2024.carfactory.factory.models.Car;
-import dk.cphbusiness.vp.f2024.carfactory.factory.models.Vw;
+package dk.cphbusiness.vp.f2024.carfactory;
+import dk.cphbusiness.vp.f2024.carfactory.models.Bmw;
+import dk.cphbusiness.vp.f2024.carfactory.models.Car;
+import dk.cphbusiness.vp.f2024.carfactory.models.Vw;
 
 import java.util.ArrayList;
 public class Factory
@@ -16,7 +16,6 @@ public class Factory
     public void produceCar(int amount, String type)
     {
         String carToBuild = type.toLowerCase();
-        System.out.println(carToBuild);
 
         for(int i = 0; i < amount; i++)
         {

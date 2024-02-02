@@ -1,11 +1,13 @@
-package dk.cphbusiness.vp.f2024.carfactory;
+package dk.cphbusiness.vp.f2024;
 
-import dk.cphbusiness.vp.f2024.carfactory.factory.Factory;
+import dk.cphbusiness.vp.f2024.carfactory.Factory;
 
 public class Main
 {
     public static void main(String[] args)
     {
+        //test carfactory
+        /*
         Factory factory = new Factory();
 
         factory.produceCar(5, "BMW");
@@ -13,8 +15,13 @@ public class Main
         factory.produceCar(5, "BMW");
 
         factory.printAllCars();
+        */
+
 
 
 
     }
+
+
+
 }
