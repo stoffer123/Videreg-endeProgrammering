@@ -1,6 +1,7 @@
 package dk.cphbusiness.vp.f2024.carfactory.factory;
 import dk.cphbusiness.vp.f2024.carfactory.factory.models.Bmw;
 import dk.cphbusiness.vp.f2024.carfactory.factory.models.Car;
+import dk.cphbusiness.vp.f2024.carfactory.factory.models.Vw;
 
 import java.util.ArrayList;
 public class Factory
@@ -22,6 +23,12 @@ public class Factory
             if(carToBuild.equals("bmw"))
             {
                 cars.add(new Bmw());
+
+            }
+            else if(carToBuild.equals("vw"))
+            {
+                cars.add(new Vw());
+
             }
             else
             {
@@ -39,6 +46,10 @@ public class Factory
             if(car instanceof Bmw)
             {
                 System.out.println(((Bmw) car).getName());
+            }
+            if(car instanceof Vw)
+            {
+                System.out.println(((Vw) car).getName());
             }
         }
     }

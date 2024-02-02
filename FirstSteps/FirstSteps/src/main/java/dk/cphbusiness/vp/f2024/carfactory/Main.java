@@ -9,6 +9,8 @@ public class Main
         Factory factory = new Factory();
 
         factory.produceCar(5, "BMW");
+        factory.produceCar(5, "VW");
+        factory.produceCar(5, "BMW");
 
         factory.printAllCars();
 
