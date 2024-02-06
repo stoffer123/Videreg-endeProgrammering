@@ -64,6 +64,12 @@ public class Factory
 
         System.out.println("How many do you want?");
         amount = readIntInput();
+        //Early return in case no valid integer was entered for amount
+        if(amount == 1111)
+        {
+            System.out.println("Non integer amount entered, please try again!");
+            return;
+        }
 
         switch (carToBuild){
             case 1:
@@ -72,6 +78,7 @@ public class Factory
             case 2:
                 buildCars("BMW", amount);
                 break;
+
             default:
                 System.out.println("Not a valid model, try again.");
                 break;
@@ -124,7 +131,7 @@ public class Factory
                 break;
         }
     }
-//Print cars
+//Print cars  Kunne laves som switch???
     private void printCars(int selection) {
         if (selection == 1) {
             for (Car car : cars) {
