@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class Factory
 {
-    private static ArrayList<Car> cars = new ArrayList<Car>();
+    private static ArrayList<Car> cars = new ArrayList<>();
 
     public Factory() {
 
