@@ -161,16 +161,18 @@ public class Factory
     private int readIntInput()
     {
         Scanner scanner = new Scanner(System.in);
-        int input = 1111;
 
-        try{
-            input = Integer.parseInt(scanner.nextLine());
+        while(true)
+        {
+            try
+            {
+                return Integer.parseInt(scanner.nextLine());
+            }
+            catch (NumberFormatException e)
+            {
+                System.out.println("Not a valid option, try again!");
+            }
         }
-        catch(NumberFormatException e){
-            System.out.println(e);
-        }
-
-        return input;
 
     }
 
