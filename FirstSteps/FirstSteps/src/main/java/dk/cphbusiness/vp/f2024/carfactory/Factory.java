@@ -55,7 +55,7 @@ public class Factory
         int carToBuild;
         int amount;
         System.out.println("""
-                Select wanted car: 
+                Select wanted car:
                 [1] VW
                 [2] BMW
                 [0] Exit to main menu
