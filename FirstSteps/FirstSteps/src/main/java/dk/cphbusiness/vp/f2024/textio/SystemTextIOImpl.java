@@ -21,11 +21,10 @@ public class SystemTextIOImpl implements TextIO
         }
     }
 
-   @Override
+    @Override
     public String get()
     {
         return scanner.nextLine();
     }
-
 
 }
