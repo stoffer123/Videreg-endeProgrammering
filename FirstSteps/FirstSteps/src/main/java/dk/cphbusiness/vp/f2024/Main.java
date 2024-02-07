@@ -6,17 +6,14 @@ public class Main
 {
     public static void main(String[] args)
     {
-        //test carfactory
+        //test carFactory
 
-        Factory factory = new Factory();
-        factory.mainMenu();
-
-
-
-
-
+         Factory factory = new Factory();
+         factory.mainMenu();
 
     }
+
+
 
 
 
