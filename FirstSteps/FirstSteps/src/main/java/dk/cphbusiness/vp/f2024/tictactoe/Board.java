@@ -4,8 +4,7 @@ public interface Board
 {
     void printBoard();
     void checkWinner(Player player1, Player player2);
-    void scoreBoard();
-
+    void scoreBoard(Player player1, Player player2);
     void changeBoard(char[][] board);
 
 
