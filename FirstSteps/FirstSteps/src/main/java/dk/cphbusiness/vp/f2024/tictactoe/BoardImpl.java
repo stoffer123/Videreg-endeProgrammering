@@ -2,11 +2,27 @@ package dk.cphbusiness.vp.f2024.tictactoe;
 
 public class BoardImpl implements Board
 {
-    private char board[][] = {
-            {' ', ' ', ' '},
-            {' ', ' ', ' '},
-            {' ', ' ', ' '},
-    };
+    private char[][] board;
+
+BoardImpl()
+{
+    this.board = new char[3][3];
+    intialize();
+}
+
+    @Override
+    public void intialize()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                board[i][j] = ' ';
+            }
+        }
+
+    }
+
     @Override
     public void printBoard()
     {
@@ -20,34 +36,19 @@ public class BoardImpl implements Board
     }
 
     @Override
-    public void checkWinner(Player player1, Player player2)
+    public boolean checkWinner(Player player)
     {
-        Player players[] = {player1, player2};
-        for(Player player : players)
-        {
-            if(
-                //Check horizontal
-                    board[0][0] == player.getSymbol() && board[0][1] == player.getSymbol() && board[0][2] == player.getSymbol()
-                    || board[1][0] == player.getSymbol() && board[1][1] == player.getSymbol() && board[1][2] == player.getSymbol()
-                    || board[2][0] == player.getSymbol() && board[2][1] == player.getSymbol() && board[2][2] == player.getSymbol()
+        //Check horizontal
+        return board[0][0] == player.getSymbol() && board[0][1] == player.getSymbol() && board[0][2] == player.getSymbol()
+                || board[1][0] == player.getSymbol() && board[1][1] == player.getSymbol() && board[1][2] == player.getSymbol()
+                || board[2][0] == player.getSymbol() && board[2][1] == player.getSymbol() && board[2][2] == player.getSymbol()
                 //Check vertical
-                    || board[0][0] == player.getSymbol() && board[1][0] == player.getSymbol() && board[2][0] == player.getSymbol()
-                    || board[0][1] == player.getSymbol() && board[1][1] == player.getSymbol() && board[2][1] == player.getSymbol()
-                    || board[0][2] == player.getSymbol() && board[1][2] == player.getSymbol() && board[2][2] == player.getSymbol()
+                || board[0][0] == player.getSymbol() && board[1][0] == player.getSymbol() && board[2][0] == player.getSymbol()
+                || board[0][1] == player.getSymbol() && board[1][1] == player.getSymbol() && board[2][1] == player.getSymbol()
+                || board[0][2] == player.getSymbol() && board[1][2] == player.getSymbol() && board[2][2] == player.getSymbol()
                 //Check diagonal
-                    || board[0][0] == player.getSymbol() && board[1][1] == player.getSymbol() && board[2][2] == player.getSymbol()
-                    || board[0][2] == player.getSymbol() && board[1][1] == player.getSymbol() && board[2][0] == player.getSymbol()
-            )
-            {
-                //Apply score
-                System.out.println(player.getName() + "Has won!");
-                player.incrScore();
-                return;
-
-            }
-
-
-        }
+                || board[0][0] == player.getSymbol() && board[1][1] == player.getSymbol() && board[2][2] == player.getSymbol()
+                || board[0][2] == player.getSymbol() && board[1][1] == player.getSymbol() && board[2][0] == player.getSymbol();
     }
 
     @Override
@@ -59,8 +60,16 @@ public class BoardImpl implements Board
     }
 
     @Override
-    public void changeBoard(char[][] board)
+    public boolean makeMove(Player player, int[] move)
     {
+        int row = move[0];
+        int col = move[1];
 
+        if(row < 0 || row >= 3 || col < 0 || col >= 3 ||board[row][col] != ' ')
+        {
+            return false; //invalid move
+        }
+        board[row][col] = player.getSymbol();
+        return true;
     }
 }
