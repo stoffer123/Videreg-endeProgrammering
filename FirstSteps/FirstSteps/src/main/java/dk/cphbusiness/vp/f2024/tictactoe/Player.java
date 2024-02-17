@@ -2,11 +2,11 @@ package dk.cphbusiness.vp.f2024.tictactoe;
 
 public interface Player
 {
-    void setSymbol();
+    void setSymbol(char newSymbol);
     char getSymbol();
     String getName();
     int getScore();
-    int incrScore();
+    void incrScore();
 
 
 }
