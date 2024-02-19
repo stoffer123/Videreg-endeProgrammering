@@ -4,4 +4,5 @@ public interface Game
 {
     void updateScore(Player player);
 
+    void runGame();
 }
