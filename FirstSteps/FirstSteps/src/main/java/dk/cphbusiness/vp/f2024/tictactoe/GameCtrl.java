@@ -1,8 +1,6 @@
 package dk.cphbusiness.vp.f2024.tictactoe;
 
-public interface Game
+public interface GameCtrl
 {
-    void updateScore(Player player);
-
     void runGame();
 }

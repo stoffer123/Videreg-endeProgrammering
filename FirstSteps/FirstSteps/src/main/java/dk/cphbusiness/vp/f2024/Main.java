@@ -15,8 +15,6 @@ public class Main
          factory.mainMenu();
 */
 
-        Game game = new GameImpl();
-        game.runGame();
 
     }
 
